@@ -1,0 +1,89 @@
+html,
+body {
+  height: 100vh;
+  width: 100vw;
+  background: #27282D; }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+#app {
+  height: 100%;
+  min-height: 70%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: #FFFFFF; }
+  #app .container {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: .5em;
+    width: calc(50% - 1.5em * 2);
+    height: calc(100% - 1.5em * 2);
+    position: relative;
+    margin: .5em;
+    padding: 1em;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.2);
+    transition: all .3s; }
+    #app .container:hover {
+      background: #f8625c;
+      border-color: #f8625c; }
+    #app .container h1 {
+      color: rgba(255, 255, 255, 0.8);
+      margin: .25em;
+      display: flex;
+      font-size: 1em;
+      font-weight: 200; }
+    #app .container .editor {
+      width: 100%;
+      min-height: calc(100% - 1em * 2);
+      border-radius: 3px; }
+    #app .container .ace_content,
+    #app .container .ace_gutter {
+      background-color: #27282D !important; }
+
+.live {
+  min-height: 100%;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  color: #FFFFFF; }
+  .live .container {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: .5em;
+    width: calc(100% - 1.5em * 2);
+    min-height: calc(100% - 1.5em * 2);
+    position: relative;
+    margin: .5em;
+    padding: 1em;
+    overflow: hidden;
+    display: flex;
+    background: rgba(255, 255, 255, 0.2);
+    flex-direction: column;
+    overflow: hidden; }
+    .live .container .button {
+      background-color: rgba(66, 185, 131, 0.7);
+      color: #FFFFFF;
+      font-size: 1.5em;
+      display: flex;
+      padding: .5em;
+      cursor: pointer;
+      transition: all .3s; }
+      .live .container .button:hover {
+        background-color: #42B983; }
+    .live .container #live {
+      width: 100%;
+      min-height: calc(100% - 1em * 2 - 2em);
+      height: auto;
+      background: #FFFFFF;
+      color: #27282D; }
+      .live .container #live * {
+        display: block;
+        position: relative; }
+      .live .container #live style {
+        display: none; }
+
+/*# sourceMappingURL=main.css.map */

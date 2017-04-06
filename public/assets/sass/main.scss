@@ -1,0 +1,103 @@
+@import "color";
+html,
+body {
+    height: 100vh;
+    width: 100vw;
+    background: $black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    height: 100%;
+    min-height: 70%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: $white;
+    .container {
+        border: 1px solid rgba($white, .5);
+        border-radius: .5em;
+        width: calc(50% - 1.5em * 2);
+        height: calc(100% - 1.5em * 2);
+        position: relative;
+        margin: .5em;
+        padding: 1em;
+        overflow: hidden;
+        background: rgba($white, .2);
+        transition: all .3s;
+        &:hover {
+            background: $red;
+            border-color: $red;
+        }
+        h1 {
+            color: rgba($white, .8);
+            margin: .25em;
+            display: flex;
+            font-size: 1em;
+            font-weight: 200;
+        }
+        .editor {
+            width: 100%;
+            min-height: calc(100% - 1em * 2);
+            border-radius: 3px;
+        }
+        .ace_content,
+        .ace_gutter {
+            background-color: $black !important;
+        }
+    }
+}
+
+.live {
+    min-height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    color: $white;
+    .container {
+        border: 1px solid rgba($white, .5);
+        border-radius: .5em;
+        width: calc(100% - 1.5em * 2);
+        min-height: calc(100% - 1.5em * 2);
+        position: relative;
+        margin: .5em;
+        padding: 1em;
+        overflow: hidden;
+        display: flex;
+        background: rgba($white, .2);
+        flex-direction: column;
+        overflow: hidden;
+        .button {
+            background-color: rgba($green, .7);
+            color: $white;
+            font-size: 1.5em;
+            display: flex;
+            padding: .5em;
+            cursor: pointer;
+            transition: all .3s;
+            &:hover {
+                background-color: $green;
+            }
+        }
+        #live {
+            width: 100%;
+            min-height: calc(100% - 1em * 2 - 2em);
+            height: auto;
+            background: $white;
+            color: $black;
+            * {
+                display: block;
+                position: relative;
+            }
+            style {
+                display: none;
+            }
+        }
+    }
+}
